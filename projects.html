@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Selected projects by Wenling Lu." />
+  <title>Projects — Wenling Lu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top navigation -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-mark">W</span>
+        <span>Wenling Lu</span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="resume.html" class="nav__link">Resume</a></li>
+        <li><a href="projects.html" class="nav__link is-active">Projects</a></li>
+        <li><a href="contact.html" class="nav__link">Contact Me</a></li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="container">
+      <header class="page__head">
+        <span class="eyebrow">🛠️ Things I've made</span>
+        <h1 class="page__title">Projects</h1>
+        <p class="page__lead">A few small things I've built — each taught me something.</p>
+      </header>
+
+      <!-- Live to-do list app -->
+      <section class="todo-app" id="todoApp">
+        <header class="section__head section__head--left">
+          <span class="section__kicker">✅ Live demo</span>
+          <h2 class="section__title">Plan-a-Day To-Do</h2>
+          <p class="section__desc">Pick a date on the calendar, jot down what you need to do, and check things off as you go. Your list syncs to Supabase, so it's there wherever you open it.</p>
+        </header>
+
+        <div class="todo">
+          <!-- Calendar panel -->
+          <div class="todo__panel">
+            <div class="cal">
+              <div class="cal__head">
+                <button type="button" class="cal__nav" data-cal-prev aria-label="Previous month">‹</button>
+                <div class="cal__title" data-cal-title>September 2026</div>
+                <button type="button" class="cal__nav" data-cal-next aria-label="Next month">›</button>
+              </div>
+              <div class="cal__weekdays">
+                <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+              </div>
+              <div class="cal__grid" data-cal-grid></div>
+            </div>
+          </div>
+
+          <!-- Main panel: input + list -->
+          <div class="todo__main">
+            <!-- Emoji + priority picker -->
+            <div class="todo__picker" data-todo-picker>
+              <div class="todo__picker-row">
+                <span class="todo__picker-label">Emoji</span>
+                <div class="todo__emoji-group" role="group" aria-label="Pick an emoji tag">
+                  <button type="button" class="todo__emoji-btn" data-emoji="📝" aria-label="Note">📝</button>
+                  <button type="button" class="todo__emoji-btn" data-emoji="✅" aria-label="Done">✅</button>
+                  <button type="button" class="todo__emoji-btn" data-emoji="🔥" aria-label="Urgent">🔥</button>
+                  <button type="button" class="todo__emoji-btn" data-emoji="⭐" aria-label="Important">⭐</button>
+                  <button type="button" class="todo__emoji-btn" data-emoji="🎯" aria-label="Goal">🎯</button>
+                  <button type="button" class="todo__emoji-btn" data-emoji="💡" aria-label="Idea">💡</button>
+                  <button type="button" class="todo__emoji-btn" data-emoji="🛒" aria-label="Shopping">🛒</button>
+                  <button type="button" class="todo__emoji-btn" data-emoji="❤️" aria-label="Love">❤️</button>
+                </div>
+              </div>
+              <div class="todo__picker-row">
+                <span class="todo__picker-label">Priority</span>
+                <div class="todo__pri-group" role="group" aria-label="Pick priority">
+                  <button type="button" class="todo__pri-btn" data-pri="low">Low</button>
+                  <button type="button" class="todo__pri-btn is-active" data-pri="medium">Med</button>
+                  <button type="button" class="todo__pri-btn" data-pri="high">High</button>
+                </div>
+              </div>
+            </div>
+
+            <form class="todo__form" data-todo-form>
+              <input
+                type="text"
+                class="todo__input"
+                data-todo-input
+                placeholder="What needs doing?"
+                aria-label="New task"
+                autocomplete="off"
+                required
+              />
+              <button type="submit" class="btn btn--primary todo__add">Add</button>
+            </form>
+            <p class="todo__date" data-todo-date>Adding for <strong>today</strong></p>
+
+            <ul class="todo__list" data-todo-list></ul>
+            <p class="todo__empty" data-todo-empty>No tasks yet. Pick a date and add one to get started.</p>
+            <p class="todo__count" data-todo-count></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Live weather app -->
+      <section class="weather-app" id="weatherApp">
+        <header class="section__head section__head--left">
+          <span class="section__kicker">🌦️ Live demo</span>
+          <h2 class="section__title">City Weather</h2>
+          <p class="section__desc">Enter a city to see its current temperature, conditions, wind, and humidity. English or Chinese names both work — try "Beijing" or "北京". If a name matches more than one city, like "Suzhou", you can pick the right one.</p>
+        </header>
+
+        <div class="weather">
+          <form class="weather__form" data-weather-form>
+            <input
+              type="text"
+              class="weather__input"
+              data-weather-input
+              placeholder="City name, e.g. Beijing, 苏州 or 320500"
+              aria-label="City name"
+              autocomplete="off"
+            />
+            <button type="submit" class="btn btn--primary weather__btn" data-weather-btn>Search</button>
+          </form>
+
+          <div class="weather__result" data-weather-result aria-live="polite">
+            <p class="weather__hint">Search for a city to see its current weather.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="projects">
+        <article class="project">
+          <div class="project__media">📖</div>
+          <div class="project__body">
+            <div class="project__tags"><span>HTML</span><span>CSS</span><span>Vanilla JS</span></div>
+            <h2 class="project__title">Let's Learning English</h2>
+            <p class="project__desc">A picture-word quiz for children aged 3–6: see an apple, a dog, or an eye, then tap the matching English word. Friendly, colourful, and forgiving of wrong guesses.</p>
+            <div class="project__links">
+              <a href="english-app/index.html" class="project__link">Live demo →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__media">🌱</div>
+          <div class="project__body">
+            <div class="project__tags"><span>React</span><span>Node.js</span><span>Stripe</span></div>
+            <h2 class="project__title">Little Sprout</h2>
+            <p class="project__desc">A gentle plant-care app that reminds you when to water and repot. Friendly nudges, no guilt trips.</p>
+            <div class="project__links">
+              <a href="#" class="project__link">Live demo →</a>
+              <a href="#" class="project__link">Source code →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__media">📝</div>
+          <div class="project__body">
+            <div class="project__tags"><span>Next.js</span><span>MDX</span><span>Vercel</span></div>
+            <h2 class="project__title">Kind Words</h2>
+            <p class="project__desc">A distraction-free journaling tool that saves short, kind notes to yourself.</p>
+            <div class="project__links">
+              <a href="#" class="project__link">Live demo →</a>
+              <a href="#" class="project__link">Source code →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__media">🍳</div>
+          <div class="project__body">
+            <div class="project__tags"><span>Vue</span><span>IndexedDB</span></div>
+            <h2 class="project__title">Pantry Pal</h2>
+            <p class="project__desc">Tell it what's in your fridge, and it suggests a simple dinner you can make tonight.</p>
+            <div class="project__links">
+              <a href="#" class="project__link">Live demo →</a>
+              <a href="#" class="project__link">Source code →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__media">📚</div>
+          <div class="project__body">
+            <div class="project__tags"><span>React</span><span>Firebase</span></div>
+            <h2 class="project__title">Bookshelf</h2>
+            <p class="project__desc">A cozy tracker for books you've started and not finished. No deadlines, just gentle reminders.</p>
+            <div class="project__links">
+              <a href="#" class="project__link">Live demo →</a>
+              <a href="#" class="project__link">Source code →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__media">🌤️</div>
+          <div class="project__body">
+            <div class="project__tags"><span>TypeScript</span><span>CSS</span><span>API</span></div>
+            <h2 class="project__title">Daylight</h2>
+            <p class="project__desc">A tiny weather page that just tells you whether it's a good day for a walk.</p>
+            <div class="project__links">
+              <a href="#" class="project__link">Live demo →</a>
+              <a href="#" class="project__link">Source code →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__media">✉️</div>
+          <div class="project__body">
+            <div class="project__tags"><span>HTML/CSS</span><span>A11y</span></div>
+            <h2 class="project__title">Letter Kit</h2>
+            <p class="project__desc">An accessible email template set for small newsletters. Readable and screen-reader friendly.</p>
+            <div class="project__links">
+              <a href="#" class="project__link">Live demo →</a>
+              <a href="#" class="project__link">Source code →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__brand">
+            <span class="nav__logo-mark">W</span>
+            <span>Wenling Lu</span>
+          </div>
+          <div class="footer__funfact">
+            <p class="footer__funfact-label">✨ Fun fact about me</p>
+            <p class="footer__funfact-text">I once got bitten by a dog that was inside a cage.</p>
+          </div>
+        </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <p class="footer__nav-title">Explore</p>
+          <a href="index.html">Home</a>
+          <a href="resume.html">Resume</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact Me</a>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Wenling Lu. Made with care &amp; a lot of tea.</p>
+        <p>Have a wonderful day. 😊</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>

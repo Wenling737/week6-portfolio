@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Say hello to Wenling Lu — send an email or a friendly message." />
+  <title>Contact Me — Wenling Lu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top navigation -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-mark">W</span>
+        <span>Wenling Lu</span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="resume.html" class="nav__link">Resume</a></li>
+        <li><a href="projects.html" class="nav__link">Projects</a></li>
+        <li><a href="contact.html" class="nav__link is-active">Contact Me</a></li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="container">
+      <header class="page__head">
+        <span class="eyebrow">✉️ Let's talk</span>
+        <h1 class="page__title">Contact Me</h1>
+        <p class="page__lead">A project, a question, or just to say hi — I'd love to hear from you. I usually reply within a day or two.</p>
+      </header>
+
+      <div class="contact">
+        <!-- Contact channels -->
+        <div class="contact__info">
+          <p class="contact__intro">Reach me by email, or just use the form on the right:</p>
+
+          <a href="mailto:Wenling.Lu26@student.xjtlu.edu.cn" class="channel">
+            <span class="channel__ico">✉️</span>
+            <span>
+              <span class="channel__label">Email</span>
+              <span class="channel__value">Wenling.Lu26@student.xjtlu.edu.cn</span>
+            </span>
+          </a>
+        </div>
+
+        <!-- Friendly message form -->
+        <form class="form" id="contactForm" novalidate>
+          <div class="form__success" id="formSuccess">
+            <span>🎉</span>
+            <span>Thanks for reaching out! I'll get back to you soon.</span>
+          </div>
+
+          <div class="form__row form__row--2">
+            <div>
+              <label class="form__label" for="name">Your name</label>
+              <input class="form__control" type="text" id="name" name="name" placeholder="What should I call you?" required />
+            </div>
+            <div>
+              <label class="form__label" for="email">Email</label>
+              <input class="form__control" type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+
+          <div class="form__row">
+            <label class="form__label" for="subject">Subject</label>
+            <input class="form__control" type="text" id="subject" name="subject" placeholder="What's this about?" />
+          </div>
+
+          <div class="form__row">
+            <label class="form__label" for="message">Your message</label>
+            <textarea class="form__control" id="message" name="message" placeholder="Say hi, share an idea, ask a question." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary" style="width:100%">Send message →</button>
+          <p class="form__note">No spam, ever. Just a friendly reply.</p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__brand">
+            <span class="nav__logo-mark">W</span>
+            <span>Wenling Lu</span>
+          </div>
+          <div class="footer__funfact">
+            <p class="footer__funfact-label">✨ Fun fact about me</p>
+            <p class="footer__funfact-text">I once got bitten by a dog that was inside a cage.</p>
+          </div>
+        </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <p class="footer__nav-title">Explore</p>
+          <a href="index.html">Home</a>
+          <a href="resume.html">Resume</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact Me</a>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Wenling Lu. Made with care &amp; a lot of tea.</p>
+        <p>Have a wonderful day. 😊</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>

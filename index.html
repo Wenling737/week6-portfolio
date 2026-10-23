@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hi! I'm Wenling Lu — welcome to my personal website." />
+  <title>Wenling Lu — Hello there!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top navigation -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-mark">W</span>
+        <span>Wenling Lu</span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html" class="nav__link is-active">Home</a></li>
+        <li><a href="resume.html" class="nav__link">Resume</a></li>
+        <li><a href="projects.html" class="nav__link">Projects</a></li>
+        <li><a href="contact.html" class="nav__link">Contact Me</a></li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero / personal intro -->
+    <header class="hero" id="home">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <h1 class="hero__name">Hi, I'm Wenling <span class="wave">👋</span></h1>
+          <div class="hero__cta">
+            <a href="projects.html" class="btn btn--primary">See my work →</a>
+            <a href="contact.html" class="btn btn--ghost">Say hello</a>
+          </div>
+          <ul class="hero__social">
+            <li><a href="mailto:Wenling.Lu26@student.xjtlu.edu.cn">Email</a></li>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div class="hero__avatar">
+          <div class="hero__avatar-ring--2"></div>
+          <div class="hero__avatar-ring"></div>
+          <div class="hero__avatar-img">
+            <img src="headshot.jpg" alt="Wenling Lu" class="avatar-photo" onerror="this.remove()" />
+            <span class="avatar-initials">WL</span>
+          </div>
+          <div class="hero__avatar-badge">☕</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Self introduction -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__head">
+          <span class="section__kicker">About me</span>
+          <h2 class="section__title">A quick self-introduction</h2>
+        </header>
+        <div class="about-block">
+          <div class="about-item">
+            <span class="about-item__emoji">🏞️</span>
+            <div>
+              <h3 class="about-item__title">From Yancheng, Jiangsu</h3>
+              <p class="about-item__desc">My hometown is the only city in Jiangsu Province with no mountains at all — just wide, flat land.</p>
+            </div>
+          </div>
+          <div class="about-item">
+            <span class="about-item__emoji">💸</span>
+            <div>
+              <h3 class="about-item__title">Bachelor's in Internet Finance</h3>
+              <p class="about-item__desc">My first degree was in internet finance — numbers, online platforms, and how money moves digitally.</p>
+            </div>
+          </div>
+          <div class="about-item">
+            <span class="about-item__emoji">🎓</span>
+            <div>
+              <h3 class="about-item__title">Now studying Digital Education</h3>
+              <p class="about-item__desc">A completely new field for me, with nothing in common with my bachelor's — and I find it genuinely interesting.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Three things I like -->
+    <section class="section section--alt" id="likes">
+      <div class="container">
+        <header class="section__head">
+          <span class="section__kicker">A few of my favorite things</span>
+          <h2 class="section__title">Three things I genuinely love</h2>
+        </header>
+        <div class="likes">
+          <article class="like">
+            <div class="like__emoji">✈️</div>
+            <h3 class="like__title">Travelling</h3>
+            <p class="like__desc">New cities, local food, and collecting boarding passes.</p>
+          </article>
+          <article class="like">
+            <div class="like__emoji">🎤</div>
+            <h3 class="like__title">Going to concerts</h3>
+            <p class="like__desc">Singing along live, surrounded by thousands of friends I haven't met yet.</p>
+          </article>
+          <article class="like">
+            <div class="like__emoji">🛍️</div>
+            <h3 class="like__title">Shopping</h3>
+            <p class="like__desc">Hunting for that perfect little thing I didn't know I needed.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Three of my favorite stars -->
+    <section class="section" id="stars">
+      <div class="container">
+        <header class="section__head">
+          <span class="section__kicker">Stars I cheer for</span>
+          <h2 class="section__title">Three of my favorite stars</h2>
+        </header>
+        <div class="likes stars">
+          <article class="like star">
+            <div class="star__photo">
+              <img src="tnt.jpg" alt="TNT (时代少年团)" onerror="this.remove()" />
+              <span class="star__emoji">🌟</span>
+            </div>
+            <div class="star__body">
+              <h3 class="like__title">TNT <span class="star__sub">(时代少年团)</span></h3>
+              <p class="like__desc">Teens in Times — energy, bond, and songs on repeat.</p>
+            </div>
+          </article>
+          <article class="like star">
+            <div class="star__photo">
+              <img src="top.jpg" alt="TOP (登陆少年组合)" onerror="this.remove()" />
+              <span class="star__emoji">🎤</span>
+            </div>
+            <div class="star__body">
+              <h3 class="like__title">TOP <span class="star__sub">(登陆少年组合)</span></h3>
+              <p class="like__desc">TransFormProject — a fresh group with real potential.</p>
+            </div>
+          </article>
+          <article class="like star">
+            <div class="star__photo">
+              <img src="tf4.jpg" alt="TF四代 (TF Family 4th Gen)" onerror="this.remove()" />
+              <span class="star__emoji">✨</span>
+            </div>
+            <div class="star__body">
+              <h3 class="like__title">TF四代 <span class="star__sub">(TF Family 4th Gen)</span></h3>
+              <p class="like__desc">Rising trainees — future stars in the making.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer with a fun fact -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__brand">
+            <span class="nav__logo-mark">W</span>
+            <span>Wenling Lu</span>
+          </div>
+          <div class="footer__funfact">
+            <p class="footer__funfact-label">✨ Fun fact about me</p>
+            <p class="footer__funfact-text">I once got bitten by a dog that was inside a cage.</p>
+          </div>
+        </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <p class="footer__nav-title">Explore</p>
+          <a href="index.html">Home</a>
+          <a href="resume.html">Resume</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact Me</a>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Wenling Lu. Made with care &amp; a lot of tea.</p>
+        <p>Have a wonderful day. 😊</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
